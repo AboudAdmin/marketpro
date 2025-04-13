@@ -355,13 +355,17 @@ const ProductDetailsTwo = () => {
                                 </div>
                             </div>
                             <button
-            onClick={() => addToCart(currentProduct)} // إضافة المنتج إلى السلة عند الضغط
-            className="btn btn-main flex-center gap-8 rounded-8 py-16 fw-normal mt-48"
-            
-          >
-            <i className="ph ph-shopping-cart-simple text-lg" />
-            Add To Cart
-          </button>
+  onClick={() => {
+    console.log("Product to add:", currentProduct); 
+    addToCart(currentProduct); 
+    console.log("Item added to cart!"); 
+  }}
+  className="btn btn-main flex-center gap-8 rounded-8 py-16 fw-normal mt-48"
+>
+  <i className="ph ph-shopping-cart-simple text-lg" />
+  Add To Cart
+</button>
+
 
                             <Link
                                 to="#"

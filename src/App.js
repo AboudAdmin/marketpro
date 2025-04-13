@@ -13,7 +13,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import ContactPage from "./pages/ContactPage";
 import CategoryPage from "./pages/CategoryPage";
-import { CartProvider } from "./context/CartContext";  // استيراد CartProvider
+import { CartProvider } from "./context/CartContext";  
 
 function App() {
   return (

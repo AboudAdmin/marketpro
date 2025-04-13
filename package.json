@@ -11,6 +11,7 @@
     "animate.css": "^4.1.1",
     "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
+    "formik": "^2.4.6",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.7.1",
     "lucide-react": "^0.487.0",
@@ -23,7 +24,8 @@
     "react-slider": "^2.0.6",
     "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",

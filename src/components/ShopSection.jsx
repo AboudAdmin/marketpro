@@ -707,6 +707,8 @@ const Cart = () => {
                         {/* Top End */}
                         <div className={`list-grid-wrapper ${grid && "list-view"}`}>
                         {products.map((product) => (
+                            <div key={product.id} className="product-card">
+                            
                             
                             
 
@@ -775,18 +777,27 @@ const Cart = () => {
                                             {product.price} <span className="text-gray-500 fw-normal">/Qty</span>{" "}
                                         </span>
                                     </div>
-                                    <Link
-  to={{
-    pathname: "/cart",
-    state: { product }, 
-  }}
-  className="product-card__cart btn bg-gray-50 text-heading hover-bg-main-600 hover-text-white py-11 px-24 rounded-8 flex-center gap-8 fw-medium"
-  tabIndex={0}
-  onClick={() => console.log("Product added to cart:", product)}
->
-  Add To Cart <i className="ph ph-shopping-cart" />
-</Link>
-                                </div>
+                                    {products.map((product) => (
+  <div className="product-card h-100 p-16 border border-gray-100 hover-border-main-600 rounded-16 position-relative transition-2">
+    
+    <button
+      onClick={() => {
+        console.log("Adding product:", product); 
+        addToCart(product);
+        console.log("Product added to cart!"); 
+      }}
+      className="product-card__cart btn bg-gray-50 text-heading hover-bg-main-600 hover-text-white py-11 px-24 rounded-8 flex-center gap-8 fw-medium"
+    >
+      Add To Cart <i className="ph ph-shopping-cart" />
+    </button>
+  </div>
+))}
+</div>
+                                    
+                                    
+
+
+                    </div>
                             </div>
                         ))}
                            </div>
